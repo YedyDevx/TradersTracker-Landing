@@ -2,9 +2,10 @@ import { CgArrowLongRight } from "react-icons/cg";
 
 const Section2 = () => {
     return (
-        <div id="newsletter"className="relative w-full flex flex-col gap-4 py-3  bg-gray-300 dark:bg-gray-900">
-            <div className="flex flex-col text-center lg:gap-4 px-10 z-10">
-                <div className="text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-bold text-gray-900 dark:text-gray-200">Se de los primeros en obtener la APP</div>
+        <div className="relative w-full h-[620px] flex flex-col gap-4 bg-gray-300 dark:bg-gray-900">
+            <div className="w-28 h-[400px] bg-black"/>
+            {/* <div className="flex flex-col text-center lg:gap-4 px-10 z-10">
+                <div className="text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-extrabold text-gray-900 dark:text-gray-200">Se de los primeros en obtener la APP</div>
                 <div className="text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl font-bold text-yellow-500">En nuestro LANZAMIENTO.</div>
             </div>
             <div className="flex flex-row justify-center items-center gap-4 2xl:py-8 z-10">
@@ -41,7 +42,7 @@ const Section2 = () => {
                 <div className="text-center text-md leading-5 font-semibold text-gray-900 dark:text-gray-200">
                     Registrate para desbloquear Features de la App
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

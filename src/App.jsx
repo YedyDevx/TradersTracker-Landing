@@ -1,8 +1,17 @@
-function App() {
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Home from  './pages/Home';
+import HeaderMobile from './components/Header/HeaderMobile';
+
+const App = () => {
   return (
-    <div className="bg-blue-500 text-white">
-      <h1 className="text-4xl font-bold p-8 text-red-600">¡Tailwind está funcionando!</h1>
-    </div>
+    <Router>
+      <Header />
+      <HeaderMobile/>
+      <Home/>
+    </Router>
   );
-}
+};
+
 export default App;

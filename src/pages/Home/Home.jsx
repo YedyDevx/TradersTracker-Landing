@@ -2,6 +2,7 @@ import {  Element } from 'react-scroll';
 import Section1 from "./Sections/Section-1";
 import Section2 from "./Sections/Section-2";
 import Section3 from "./Sections/Section-3";
+import Section4 from "./Sections/Section-4";
 
 const Home = () => {
     return (
@@ -13,9 +14,11 @@ const Home = () => {
                 <Element name="newsletter">
                     <Section2 />
                 </Element>
-                <Section3/>
-                <Element name="plans" className="h-screen bg-yellow-500">
-                    
+                <Element name="about">
+                    <Section3/>
+                </Element>
+                <Element name="plans">
+                    <Section4/>
                 </Element>
             </div>
         </div>

@@ -2,7 +2,7 @@ import BgImg from "../../../assets/img-bg-section3.svg";
 
 const Section3 = () => {
     return (
-      <div className="w-full h-[500px] bg-gray-100 flex flex-col 2xl:px-96 lg:flex-row dark:bg-gradient-to-l dark:from-[#1d1d1d] dark:to-black">
+      <div className="w-full  bg-gray-100 flex flex-col 2xl:px-96 lg:flex-row dark:bg-gradient-to-l dark:from-[#1d1d1d] dark:to-black">
         <div className="w-full lg:w-[450px] bg-gray-100 flex flex-col py-6 dark:bg-gradient-to-l dark:from-[#1d1d1d] dark:to-black">
             <div className="text-2xl xl:text-3xl 2xl:text-4xl text-center flex flex-col font-extrabold">
                 <span className="text-black dark:text-gray-50">

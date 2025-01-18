@@ -29,28 +29,28 @@
 
 @media (min-width: 768px) {
   .traders {
-      font-size: 100px;
+      font-size: 120px;
   }
   .tracker {
-      font-size: 100px;
+      font-size: 120px;
   }
 }
 
 @media (min-width: 1280px) {
   .traders {
-      font-size: 120px;
+      font-size: 140px;
   }
   .tracker {
-      font-size: 120px;
+      font-size: 140px;
   }
 }
 
 @media (min-width: 1536px) {
   .traders {
-      font-size: 140px;
+      font-size: 150px;
   }
   .tracker {
-      font-size: 140px;
+      font-size: 150px;
   }
 }
 

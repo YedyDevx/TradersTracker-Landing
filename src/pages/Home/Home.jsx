@@ -4,7 +4,7 @@ import Section2 from "./Sections/Section-2";
 
 const Home = () => {
     return (
-        <div className="w-full min-h-screen flex flex-col  items-center bg-gray-200 dark:bg-gray-800">
+        <div className=" min-h-screen flex flex-col  items-center bg-gray-200 dark:bg-gray-800">
             <div className="w-full flex flex-col">
                 <Element name="home">
                     <Section1 />

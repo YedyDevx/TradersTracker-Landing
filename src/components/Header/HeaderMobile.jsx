@@ -8,7 +8,7 @@ const HeaderMobile = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <div>
-            <div className="lg:hidden w-full h-14 flex justify-between items-center px-5 shadow-md shadow-gray-300 bg-gray-100 dark:bg-gray-900 ">
+            <div className="lg:hidden w-full h-14 flex justify-between items-center px-5 shadow-md shadow-gray-300 bg-gray-100 dark:bg-black ">
                 <div className="">
                     <img className="w-[40px] h-[40px]" src={logo} alt="logo" />
                 </div>

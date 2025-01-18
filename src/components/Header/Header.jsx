@@ -11,7 +11,7 @@ const Header = () => {
   ];
 
   return (
-    <div className="hidden lg:flex h-16 w-full justify-between items-center px-4 bg-gray-100 dark:bg-black">
+    <div className="hidden lg:flex h-16 w-full justify-between items-center px-4 bg-gray-50 dark:bg-black">
       <div>
         <img className="w-[50px] h-[50px]" src={logo} alt="logo" />
       </div>
@@ -22,7 +22,7 @@ const Header = () => {
             to={item.to}
             smooth={true}
             duration={500}
-            className="cursor-pointer hover:bg-[#fdbf22] hover:shadow-[inset_0_3px_8px_rgba(0,0,0,0.5)] px-6 py-1 rounded-lg dark:hover:text-black"
+            className="cursor-pointer hover:bg-[#fdbf22] hover:shadow-[inset_0_3px_8px_rgba(0,0,0,0.5)] px-6 py-1 rounded-lg dark:hover:text-black transition-all duration-500 ease-in-out"
             >
             {item.name}
           </Link>

@@ -53,7 +53,7 @@ const ThemeChange = () => {
         onClick={() => setDarkMode(!darkMode)} 
         role="switch" 
         aria-checked={darkMode} 
-        className="bg-gray-800 dark:bg-yellow-500 w-14 h-7 flex relative rounded-full cursor-pointer transition-colors duration-300 ease-in-out"
+        className="bg-zinc-900 dark:bg-yellow-500 w-14 h-7 flex relative rounded-full cursor-pointer transition-colors duration-300 ease-in-out"
         >
             <div className={`w-5 h-5 bg-gray-100 rounded-full absolute top-1 transition-all duration-300 ease-in-out ${darkMode ? "right-1" : "left-1"}`}/>
             <div className={`w-4 h-4 rounded-full absolute top-1 transition-all duration-300 ease-in-out ${darkMode ? "left-2" : "right-2"}`}>

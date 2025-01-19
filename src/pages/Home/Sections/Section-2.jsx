@@ -5,7 +5,7 @@ import ImgDescuento from "../../../assets/img-descuento.svg";
 import ImgAlerta from "../../../assets/img-alerta.svg";
 
 const Section2 = () => {
-    const targetDate = new Date("2025-02-06T00:00:00");
+    const targetDate = new Date('2025-02-19T23:59:59');
     const { days, hours, minutes, seconds } = useCountdown(targetDate);
     
     return (

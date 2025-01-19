@@ -5,44 +5,33 @@ const useCountdown = (targetDate) => {
     days: 0,
     hours: 0,
     minutes: 0,
-    seconds: 0,
+    seconds: 0
   });
 
   useEffect(() => {
-    // Validar que targetDate sea una instancia válida de Date
-    const isValidDate = (date) => date instanceof Date && !isNaN(date);
-
-    if (!isValidDate(targetDate)) {
-      console.error("El targetDate proporcionado no es válido. Debe ser un objeto Date válido.");
-      setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+    if (!(targetDate instanceof Date) || isNaN(targetDate)) {
       return;
     }
 
-    const calculateTimeLeft = () => {
+    const intervalId = setInterval(() => {
       const now = new Date();
-      const difference = targetDate - now;
+      const difference = targetDate.getTime() - now.getTime();
 
-      if (difference > 0) {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60),
-        });
-      } else {
-        // Si el tiempo ya terminó, establecer todo a 0
+      if (difference <= 0) {
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+        clearInterval(intervalId);
+        return;
       }
-    };
 
-    // Iniciar el intervalo para actualizar cada segundo
-    const timer = setInterval(calculateTimeLeft, 1000);
+      setTimeLeft({
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60)
+      });
+    }, 1000);
 
-    // Calcular el tiempo restante inicialmente
-    calculateTimeLeft();
-
-    // Limpiar el intervalo cuando el componente se desmonte o el targetDate cambie
-    return () => clearInterval(timer);
+    return () => clearInterval(intervalId);
   }, [targetDate]);
 
   return timeLeft;

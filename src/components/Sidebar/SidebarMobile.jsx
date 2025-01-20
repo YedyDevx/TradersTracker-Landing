@@ -1,6 +1,7 @@
 "use client"
 import { VscChromeClose } from "react-icons/vsc";
 import { useEffect, useState } from 'react';
+import { Link } from 'react-scroll';
 
 const SidebarMobile = ({ isOpen, setIsOpen }) => {
     const [mounted, setMounted] = useState(false);
@@ -8,6 +9,12 @@ const SidebarMobile = ({ isOpen, setIsOpen }) => {
     useEffect(() => {
         setMounted(true);
     }, []);
+
+    const navItems = [
+        { name: 'Inicio', to: 'home' },
+        { name: 'Lista de Espera', to: 'newsletter' },
+        { name: 'Plan', to: 'plans' },
+    ];
 
     return (
         <>
@@ -36,15 +43,26 @@ const SidebarMobile = ({ isOpen, setIsOpen }) => {
                     z-50
                 `}
             >
-                <div className="p-4 h-full flex flex-col gap-10 text-slate-900 dark:text-white">
-                    <div className="text-2xl font-semibold flex flex-row items-center gap-2">
-                        <VscChromeClose onClick={() => setIsOpen(false)} className="text-4xl cursor-pointer" />
+                <div className="p-6 h-full flex flex-col gap-8 text-slate-900 dark:text-white bg-gradient-to-l from-[#9e9e9e] to-[#eaeaea] dark:bg-gradient-to-l dark:from-[#1d1d1d] dark:to-black shadow-lg rounded-lg">
+                    <div className="text-2xl font-semibold flex flex-row items-center gap-4">
+                        <VscChromeClose
+                        onClick={() => setIsOpen(false)}
+                        className="text-3xl cursor-pointer hover:text-red-500 transition-colors"
+                        />
                         <div>Menu</div>
                     </div>
-                    <div className="flex flex-col gap-6">
-                        <div className="text-2xl font-medium cursor-pointer border-b-[1px] border-slate-500 pb-2 ">Inicio</div>
-                        <div className="text-2xl font-medium cursor-pointer border-b-[1px] border-slate-500 pb-2 ">Plan</div>
-                        <div className="text-2xl font-medium cursor-pointer border-b-[1px] border-slate-500 pb-2 ">Lista de Espera</div>
+                    <div className="flex flex-col items-center gap-6">
+                        {navItems.map((item) => (
+                        <Link
+                            key={item.to}
+                            to={item.to}
+                            smooth={true}
+                            duration={500}
+                            className="w-full text-center cursor-pointer px-6 py-2 rounded-xl text-lg font-semibold bg-white dark:bg-yellow-500 hover:bg-[#fdbf22] hover:text-black shadow-md hover:shadow-lg transition-all duration-300 ease-in-out"
+                        >
+                            {item.name}
+                        </Link>
+                        ))}
                     </div>
                 </div>
             </aside>

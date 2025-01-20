@@ -10,7 +10,7 @@ const Section2 = () => {
     
     return (
         <motion.div
-            className="relative w-full xl:h-[620px] 2xl:h-[650px] flex flex-col gap-8 bg-gradient-to-l from-[#dadada] to-white dark:bg-gradient-to-l dark:from-[#0f0f0f] dark:to-[#0f0f0f] overflow-hidden"
+            className="relative w-full xl:h-[620px] 2xl:h-[650px] flex flex-col gap-8 py-10 bg-gradient-to-l from-[#dadada] to-white dark:bg-gradient-to-l dark:from-[#0f0f0f] dark:to-[#0f0f0f] overflow-hidden"
             initial={{ opacity: 0, y: -100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -49,7 +49,7 @@ const Section2 = () => {
                 }}
             />
 
-            <div className="flex flex-col text-center lg:gap-4 px-10 z-10 pt-16">
+            <div className="flex flex-col text-center lg:gap-4 px-10 z-10">
                 <motion.div
                     className="text-3xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-extrabold text-zinc-900 dark:text-gray-200"
                     style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' }}
@@ -62,7 +62,7 @@ const Section2 = () => {
                 </motion.div>
                 <div 
                     className="text-3xl sm:text-3xl lg:text-5xl 2xl:text-5xl font-extrabold text-yellow-500" 
-                    style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.2)' }}
+                    style={{ textShadow: '1px 3px 3px rgba(0, 0, 0, 0.2)' }}
                 >
                     nuestro LANZAMIENTO en:
                 </div>
@@ -114,12 +114,12 @@ const Section2 = () => {
                         placeholder="Correo Electronico" 
                         className="w-full max-w-md px-5 py-3 rounded-full text-lg font-semibold outline-none shadow-md shadow-gray-400 border-[1px] border-gray-200 focus:border-[#fdbf22] focus:ring-2 focus:ring-[#fdbf22] placeholder-gray-500 placeholder:text-base placeholder:font-medium dark:bg-black dark:shadow-black dark:shadow-lg dark:placeholder-[#fdbf22] dark:border-[#1d1d1d] dark:text-gray-200 transition-all duration-300 ease-in-out"
                     />
-                    <button className="w-full max-w-md xl:w-36 bg-yellow-500 text-black px-5 py-3 rounded-full flex flex-row justify-center items-center gap-2 hover:text-gray-100 shadow-md hover:shadow-[inset_0_-4px_10px_rgba(0,0,0,0.4)] dark:shadow-black dark:shadow-lg dark:hover:shadow-[inset_0_-4px_10px_rgba(0,0,0,0.8)] transition-all duration-500 ease-in-out">
+                    <button className="w-full max-w-md xl:w-36 bg-yellow-500 text-black px-5 py-3 rounded-full flex flex-row justify-center items-center gap-2 hover:text-gray-100 shadow-[inset_0_-4px_10px_rgba(0,0,0,0.4)] dark:shadow-black dark:shadow-[inset_0_-4px_10px_rgba(0,0,0,0.8)] transition-all duration-500 ease-in-out">
                         <div className="text-lg font-semibold"> Enviar</div>
                         <CgArrowLongRight className="text-xl" />
                     </button>
                 </div>
-                <div className="text-center text-md lg:text-lg xl:text-xl leading-5 pb-10 text-gray-900  dark:text-gray-200">
+                <div className="text-center text-md lg:text-lg xl:text-xl leading-5 xl:pt-5 text-gray-900  dark:text-gray-200">
                     Registrate para desbloquear Features de la App
                 </div>
             </div>

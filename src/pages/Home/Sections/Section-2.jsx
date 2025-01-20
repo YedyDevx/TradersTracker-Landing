@@ -10,6 +10,7 @@ const Section2 = () => {
     
     return (
         <motion.div
+            id="/newsletter"
             className="relative w-full xl:h-[620px] 2xl:h-[650px] flex flex-col gap-8 py-10 bg-gradient-to-l from-[#dadada] to-white dark:bg-gradient-to-l dark:from-[#0f0f0f] dark:to-[#0f0f0f] overflow-hidden"
             initial={{ opacity: 0, y: -100 }}
             whileInView={{ opacity: 1, y: 0 }}

@@ -7,7 +7,7 @@ import Footer from '../../components/Footer/Footer';
 
 const Home = () => {
     return (
-        <div className="flex flex-col items-center">
+        <div className="w-full flex flex-col items-center">
             <div className="w-full flex flex-col">
                 <Element name="home">
                     <Section1 />

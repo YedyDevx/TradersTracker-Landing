@@ -20,35 +20,7 @@ const Section2 = () => {
             <div class="absolute top-[-120px] right-[-100px] xl:right-16 w-32 xl:w-32 h-[500px] bg-gradient-to-l from-[#9e9e9e] to-[#eaeaea]  transform -rotate-45  shadow-[-30px_0_55px_#b2b2b2] dark:bg-gradient-to-l dark:from-[#1d1d1d] dark:to-black dark:shadow-black"/>
             <div class="absolute bottom-[-150px] left-[-120px] xl:left-16 w-32 h-[600px] bg-gradient-to-l from-[#9e9e9e] to-[#eaeaea] transform -rotate-45  shadow-[-30px_0_55px_#b2b2b2] dark:bg-gradient-to-l dark:from-[#1d1d1d] dark:to-black dark:shadow-black"/>
 
-            <motion.img 
-                src={ImgDescuento}
-                alt="Descuento"
-                className="hidden lg:flex absolute lg:w-56 lg:h-54 xl:w-80 xl:h-80 2xl:w-[350px] 2xl:h-[350px] bottom-28 2xl:left-80"
-                animate={{
-                y: ['0px', '-15px', '0px'], // Movimiento hacia arriba y abajo
-                rotate: [0, 5, 0], // Rotación ligera
-                }}
-                transition={{
-                duration: 2, // Duración de la animación
-                ease: 'easeInOut', // Efecto de suavizado
-                repeat: Infinity, // Repetir infinitamente
-                }}
-            />
 
-            <motion.img 
-                src={ImgAlerta}
-                alt="Alerta"
-                className="hidden lg:flex absolute lg:w-56 lg:h-54 xl:w-72 xl:h-72 bottom-32 2xl:w-[340px] 2xl:h-[340px] right-5 2xl:right-80"
-                animate={{
-                y: ['0px', '-15px', '0px'], // Movimiento hacia arriba y abajo
-                rotate: [0, 5, 0], // Rotación ligera
-                }}
-                transition={{
-                duration: 2, // Duración de la animación
-                ease: 'easeInOut', // Efecto de suavizado
-                repeat: Infinity, // Repetir infinitamente
-                }}
-            />
 
             <div className="flex flex-col text-center lg:gap-4 px-10 z-10">
                 <motion.div
@@ -62,14 +34,28 @@ const Section2 = () => {
                     Se de los primeros en obtener la APP
                 </motion.div>
                 <div 
-                    className="text-3xl sm:text-3xl lg:text-5xl 2xl:text-5xl font-extrabold text-yellow-500" 
+                    className="text-3xl sm:text-3xl lg:text-5xl 2xl:text-5xl font-extrabold text-yellow-500 z-10" 
                     style={{ textShadow: '1px 3px 3px rgba(0, 0, 0, 0.2)' }}
                 >
                     nuestro LANZAMIENTO en:
                 </div>
             </div>
             <div className="flex flex-row justify-center items-center gap-2 lg:gap-4 xl:gap-8 2xl:gap-12 xl:py-5 2xl:py-8 z-10">
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center relative">
+                    <motion.img 
+                        src={ImgDescuento}
+                        alt="Descuento"
+                        className="hidden lg:flex absolute lg:min-w-56 lg:min-h-54 xl:min-w-80 xl:min-h-80 2xl:min-w-[350px] 2xl:min-h-[350px] -top-[80px] right-[100px] -z-10"
+                        animate={{
+                        y: ['0px', '-15px', '0px'], // Movimiento hacia arriba y abajo
+                        rotate: [0, 5, 0], // Rotación ligera
+                        }}
+                        transition={{
+                        duration: 2, // Duración de la animación
+                        ease: 'easeInOut', // Efecto de suavizado
+                        repeat: Infinity, // Repetir infinitamente
+                        }}
+                    />
                     <div className="text-4xl lg:text-5xl xl:text-7xl 2xl:text-8xl font-extrabold italic text-zinc-900 dark:text-gray-200">{days}</div>
                     <div 
                         className="text-md lg:text-lg xl:text-2xl 2xl:text-3xl font-bold italic text-yellow-500"
@@ -99,7 +85,21 @@ const Section2 = () => {
                     </div>
                 </div>
                 <div className="bg-zinc-900 dark:bg-gray-200 w-[2px] h-14 lg:h-16 xl:h-28 2xl:h-32"></div>
-                <div className="flex flex-col items-center">
+                <div className="flex flex-col items-center relative">
+                    <motion.img 
+                        src={ImgAlerta}
+                        alt="Alerta"
+                        className="hidden lg:flex absolute lg:min-w-56 lg:min-h-56  xl:min-w-72 xl:min-h-72  2xl:min-w-[340px] 2xl:min-h-[340px] -top-[80px] left-[100px] -z-10"
+                        animate={{
+                        y: ['0px', '-15px', '0px'], // Movimiento hacia arriba y abajo
+                        rotate: [0, 5, 0], // Rotación ligera
+                        }}
+                        transition={{
+                        duration: 2, // Duración de la animación
+                        ease: 'easeInOut', // Efecto de suavizado
+                        repeat: Infinity, // Repetir infinitamente
+                        }}
+                    />
                     <div className="text-4xl lg:text-5xl xl:text-7xl 2xl:text-8xl font-extrabold italic text-zinc-900 dark:text-gray-200">{seconds}</div>
                     <div 
                         className="text-md lg:text-lg xl:text-2xl 2xl:text-3xl font-bold italic text-yellow-500"

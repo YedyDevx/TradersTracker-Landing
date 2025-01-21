@@ -88,37 +88,6 @@ const Section4 = () => {
         repeat: Infinity, // Repetir infinitamente
         }}
       />
-
-      <motion.img 
-        src={ImgTime}
-        alt="Descuento"
-        className="hidden xl:flex absolute xl:w-56 2xl:w-[350px] top-10 xl:left-28 2xl:left-[500px] z-20"
-        animate={{
-        y: ['0px', '-15px', '0px'], // Movimiento hacia arriba y abajo
-        rotate: [0, 5, 0], // Rotación ligera
-        }}
-        transition={{
-        duration: 2, // Duración de la animación
-        ease: 'easeInOut', // Efecto de suavizado
-        repeat: Infinity, // Repetir infinitamente
-        }}
-      />
-
-      <motion.img 
-        src={ImgBook}
-        alt="Alerta"
-        className="hidden xl:flex absolute xl:w-36 2xl:w-52 top-20 right-36 2xl:right-[550px] z-20"
-        animate={{
-        y: ['0px', '-10px', '0px'], // Movimiento hacia arriba y abajo
-        rotate: [15, 3, 15], // Rotación ligera
-        }}
-        transition={{
-        duration: 2, // Duración de la animación
-        ease: 'easeInOut', // Efecto de suavizado
-        repeat: Infinity, // Repetir infinitamente
-        }}
-      />
-
       <motion.img 
         src={ImgPesa}
         alt="Descuento"
@@ -142,6 +111,34 @@ const Section4 = () => {
         />
       </div>
       <div className="flex flex-col items-center justify-center relative z-10">
+        <motion.img 
+          src={ImgBook}
+          alt="Alerta"
+          className="hidden xl:flex absolute xl:w-36 2xl:w-52 top-10 -left-44 xl:-left-72 z-20"
+          animate={{
+          y: ['0px', '-10px', '0px'], // Movimiento hacia arriba y abajo
+          rotate: [15, 3, 15], // Rotación ligera
+          }}
+          transition={{
+          duration: 2, // Duración de la animación
+          ease: 'easeInOut', // Efecto de suavizado
+          repeat: Infinity, // Repetir infinitamente
+          }}
+        />
+        <motion.img 
+          src={ImgTime}
+          alt="Descuento"
+          className="hidden xl:flex absolute xl:w-64 2xl:w-[350px] top-1 -right-44 xl:-right-96 z-20"
+          animate={{
+          y: ['0px', '-15px', '0px'], // Movimiento hacia arriba y abajo
+          rotate: [0, 5, 0], // Rotación ligera
+          }}
+          transition={{
+          duration: 2, // Duración de la animación
+          ease: 'easeInOut', // Efecto de suavizado
+          repeat: Infinity, // Repetir infinitamente
+          }}
+        />
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}

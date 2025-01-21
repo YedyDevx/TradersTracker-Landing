@@ -70,3 +70,10 @@
     transform: rotateY(180deg);
 }
 
+@media (min-width: 1536px) {
+  .position-absolute-img-section-2 {
+      position: absolute;
+      top: 190px;
+      right: 0px;
+  }
+}

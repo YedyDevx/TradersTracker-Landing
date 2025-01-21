@@ -163,7 +163,7 @@ const Section4 = () => {
           animate={{ scale: 1 }}
           transition={{ type: "spring", stiffness: 200, damping: 20 }}
           onClick={() => setSelectedPlan(!selectedPlan)}
-          className="w-72 h-12 relative bg-white dark:bg-[#1d1d1d] rounded-full cursor-pointer shadow-md overflow-hidden"
+          className="w-[288px] h-12 relative bg-white dark:bg-[#1d1d1d] rounded-full cursor-pointer shadow-md overflow-hidden"
         >
           <motion.div
             className="absolute top-1 h-10 bg-yellow-500 rounded-full"
@@ -264,7 +264,7 @@ const Section4 = () => {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.3 }}
-                      className="text-sm text-green-600 font-medium sm:text-base md:text-lg lg:text-xl"
+                      className="text-sm text-yellow-500 font-medium sm:text-base md:text-lg lg:text-xl"
                     >
                       2 meses gratis
                     </motion.div>

@@ -1,10 +1,10 @@
 import logo from "../../../assets/logo-con-negro.png";
-import apple from "../../../assets/apple-logo.png";
 import google from "../../../assets/play-store-logo.png";
 import ImgLigth from "../../../assets/bg-ligth.svg";
 import { FaApple } from "react-icons/fa6";
 import { useTheme } from "../../../hooks/useTheme";
 import { useEffect } from "react";
+import Img from "../../../assets/1_1_.png"
 
 const Section1 = () => {
     const { theme } = useTheme();
@@ -56,7 +56,9 @@ const Section1 = () => {
                         </div>
                     </div>
                 </div>
-                <div className="hidden lg:flex w-[400px] xl:w-[500px] 2xl:w-[600px] h-[500px] items-center justify-center bg-slate-300"></div>
+                <div className="hidden lg:flex w-[450px]  2xl:w-[500px]  items-center justify-center0">
+                    <img src={Img} alt="img" className="w-full h-full " />
+                </div>
             </div>
         </div>
     );
